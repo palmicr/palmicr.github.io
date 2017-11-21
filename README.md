@@ -1,5 +1,5 @@
-# Pálmi C Rúnarsson
-Pálmi C. Rúnarsson(PCR)
+# Pálmi C Rúnarsson(PCR)
+palmicr@gmail.com
 
 Lokaverkefni fyrir VEF2B3U. 
 
