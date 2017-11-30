@@ -17,14 +17,14 @@ function initMap(){                                                             
     });
 }
 
-function getCircle(size) {
+function getCircle(size) {                                                                   // Búa til hringi á mappi
         return {
-          path: google.maps.SymbolPath.CIRCLE,
-          fillColor: 'red',
-          fillOpacity: .2,
-          scale: Math.pow(2, size * 2.5) / 2,
-          strokeColor: 'white',
-          strokeWeight: .5
+          path: google.maps.SymbolPath.CIRCLE,                                               // Nær í gögn frá google
+          fillColor: 'red',                                                                  // Litur Rauður
+          fillOpacity: .2,                                                                   // Opacityið
+          scale: Math.pow(2, size * 2.5) / 2,                                                // Stærð er alltaf 2.5 stærri
+          strokeColor: 'white',                                                              // Útlínu litur
+          strokeWeight: .5                                                                   // Stærð á útlínum
         };
 }
 
@@ -53,20 +53,20 @@ function setMarker(data) {                                                      
             content: contentString                                                           // Seta contentString við windowið.
           });
 
-          let circle1 = new google.maps.Marker({                                              // Búa til marker.
+          let circle1 = new google.maps.Marker({                                             // Búa til marker.
             position: latLng,                                                                // Láta Staðseninguna á hana.         
-            map: map,                                                                         // Festa það við mappið.
-            icon: getCircle(data.results[i].size)
+            map: map,                                                                        // Festa það við mappið.
+            icon: getCircle(data.results[i].size)                                            // Notar functonið getCircle
           });
           let marker = new google.maps.Marker({                                              // Búa til marker.
             position: latLng,                                                                // Láta Staðseninguna á hana.         
-            map: map,                                                                         // Festa það við mappið.
+            map: map,                                                                        // Festa það við mappið.
           });
           marker.addListener('click', function() {                                           // Gera það kleif að ýta á makerinn og fá upp gögnin.
           infowindow.open(map, marker);                                                      // Tengja það saman.
           });
-          circle1.addListener('click', function() {                                           // Gera það kleif að ýta á makerinn og fá upp gögnin.
-          infowindow.open(map, circle1);                                                      // Tengja það saman.
+          circle1.addListener('click', function() {                                          // Gera það kleif að ýta á makerinn og fá upp gögnin.
+          infowindow.open(map, circle1);                                                     // Tengja það saman.
           });
 
 
