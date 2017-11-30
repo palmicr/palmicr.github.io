@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Lokaverkefni </title>
+      <meta charset="utf-8" />
+      <!-- Css -->
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="jquery.nouislider.css"/>
+  </head>
+
+  <body>
+
+
+    <div id="map"></div>
+
+    <div id="slidermain">
+        <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+    </div>
+
+    <div id="slidermain2">
+        Min: <input type="number" id="value-min" />
+        Max: <input type="number" id="value-max" />
+        <div id="slider"></div>    
+    </div>
+  
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery.nouislider.js"></script>
+    <script type="text/javascript" src="main.js"></script>  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6csizPq4vbogIy3FU0IE5fLAiSvGYcVU&callback=initMap">
+    </script>
+  </body>
+</html>
