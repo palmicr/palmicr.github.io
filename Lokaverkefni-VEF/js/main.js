@@ -28,6 +28,22 @@ function getCircle(size) {                                                      
         };
 }
 
+function init(data) {
+	let max = Math.max.apply(Math, data.results[i].size);
+	let min = Math.min.apply(Math, data.results[i].size);
+    // Set up the slide control                     
+    $('#slider').noUiSlider({           
+      range: [min, max], start: [min, max], handles: 2, margin: 20, connect: true,
+      serialization: {to: [min, max],resolution: 1}
+    }).change(function() { updateMarker(min.val(), max.val()); });        // change event kallar á update() , val() les úr input reit,  ( change() er shorthand fyrir  .on( "change", handler ) )
+
+    updateMarker(min.val(), max.val());       // Update table to show matches, upphafstaða
+  }
+
+function updateMarker(min, max, data) {
+	
+}
+
 function setMarker(data) {                                                                   // Búa til marker fyrir staðsetningu jarðskjálta.
         for (let i = 0; i < data.results.length; i++) {                                      // Loopa í gegnum öll gögninn.
           let lat = data.results[i].latitude;                                                // Ná í latitude.
